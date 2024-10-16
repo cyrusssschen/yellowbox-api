@@ -81,7 +81,7 @@ export class BookingService {
 
     const { lockerId, status } = bookingDoc.data();
     // Check if the booking is already completed
-    if (status === 'completed') {
+    if (status === BookingStatus.COMPLETED) {
       throw new BadRequestException(
         `Booking with ID ${bookingId} is already completed.`,
       );
