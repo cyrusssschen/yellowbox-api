@@ -24,10 +24,6 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension dbaeumer.vscode-eslint
 ```
 
-# Run
-
-To `run` each microservice, run this command in the root of the microservice where `package.json` is located:
-
 ## Env variable
 
 1. Simply copy `.env.example` file located in each folder and rename it as `.env` file.
@@ -42,6 +38,10 @@ Please note that if code of `shared` module is changed, we would need to run `ya
 yarn install
 yarn build
 ```
+
+# Run
+
+To `run` each microservice, run this command in the root folder of the microservice where `package.json` is located:
 
 ```bash
 yarn start
