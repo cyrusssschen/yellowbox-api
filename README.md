@@ -24,18 +24,19 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension dbaeumer.vscode-eslint
 ```
 
-> # Run
->
-> To `run` each microservice, run this command in the root of the microservice where `package.json` is located:
+# Run
 
-> ## Env variable
+To `run` each microservice, run this command in the root of the microservice where `package.json` is located:
 
-Please refer to `.env.example` file located in root folder
+## Env variable
 
-> ## Build
->
-> build each microservice in its folder:
-> Please note that if code of `shared` module is changed, we would need to run `yarn build` to generate new shared library and then run `yarn install` again in service folder to make it work.
+1. Simply copy `.env.example` file located in each folder and rename it as `.env` file.
+2. Grab the appropriate private key and key ID from your firebase admin page and replace it in each `.env` file
+
+## Build
+
+build each microservice in its folder:
+Please note that if code of `shared` module is changed, we would need to run `yarn build` to generate new shared library and then run `yarn install` again in service folder to make it work.
 
 ```bash
 yarn install
@@ -54,32 +55,32 @@ yarn start
 > | User Service    | http://localhost:3366/swagger |
 > | Booking Service | http://localhost:3333/swagger |
 
-> # Test
+# Test
 
-> > ## Unit Tests
-> >
-> > To `test` each microservice, run this command in the root directory of the microservice where the `package.json` file is located:
+## Unit Tests
+
+To `test` each microservice, run this command in the root directory of the microservice where the `package.json` file is located:
 
 ```bash
 yarn test
 ```
 
-> > ## E2E Tests
-> >
-> > Due to the time limitation, the e2e tests are not implemented
+## E2E Tests
 
-> # Documentation Apis
+Due to the time limitation, the e2e tests are not implemented
 
-> > ## API endpoints
+# Documentation Apis
 
-> > > Booking service
+## API endpoints
+
+> Booking service
 
 | Method | URL                 | Description          |
 | ------ | ------------------- | -------------------- |
 | `POST` | `/v1/booking/start` | Start a new booking. |
 | `PUT`  | `/v1/booking/end`   | End a booking.       |
 
-> > > Locker service
+> Locker service
 
 | Method  | URL                            | Description           |
 | ------- | ------------------------------ | --------------------- |
@@ -87,7 +88,7 @@ yarn test
 | `PATCH` | `/v1/locker/{lockerId}/status` | Update locker status. |
 | `PATCH` | `/v1/locker/open/{lockerId}`   | Open a locker.        |
 
-> > > User service
+> User service
 
 | Method | URL                 | Description                     |
 | ------ | ------------------- | ------------------------------- |
