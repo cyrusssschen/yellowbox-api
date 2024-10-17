@@ -31,7 +31,7 @@ code --install-extension dbaeumer.vscode-eslint
 
 ## Build
 
-build each microservice in its folder:
+build each microservice in its folder.
 Please note that if code of `shared` module is changed, we would need to run `yarn build` to generate new shared library and then run `yarn install` again in service folder to make it work.
 
 ```bash
@@ -41,25 +41,17 @@ yarn build
 
 # Run
 
-To `run` each microservice, run this command in the root folder of the microservice where `package.json` is located:
+To `run` each microservice, run this command in each microservice folder:
 
 ```bash
 yarn start
 ```
 
-> Once each service is up and running locally, open the following url to give a try:
-
-> | Module Name     | URL                           |
-> | --------------- | ----------------------------- |
-> | Locker Service  | http://localhost:3355/swagger |
-> | User Service    | http://localhost:3366/swagger |
-> | Booking Service | http://localhost:3333/swagger |
-
 # Test
 
 ## Unit Tests
 
-To `test` each microservice, run this command in the root directory of the microservice where the `package.json` file is located:
+To test each microservice, run this command in each microservice folder:
 
 ```bash
 yarn test
@@ -69,7 +61,7 @@ yarn test
 
 Due to the time limitation, the e2e tests are not implemented
 
-# Documentation Apis
+# Documentation APIs
 
 ## API endpoints
 
@@ -113,7 +105,13 @@ The following `Authentication Guard` provided by nestjs and `Passport Strategy` 
 
 ### Endpoint descriptions (methods, parameters, responses)
 
-Please refer to swagger API
+Please refer to swagger API:
+
+> | Module Name     | URL                           |
+> | --------------- | ----------------------------- |
+> | Locker Service  | http://localhost:3355/swagger |
+> | User Service    | http://localhost:3366/swagger |
+> | Booking Service | http://localhost:3333/swagger |
 
 ### Error Codes and Handling
 
@@ -157,7 +155,7 @@ When a new version is released, clients should update their API calls to include
 ### Data Model
 
 ```
-Bookings (Collection)
+Booking (Collection)
   ├── booking_123 (Document)
        ├── lockerId: locker_456
        ├── userId: user_789
@@ -165,7 +163,7 @@ Bookings (Collection)
        ├── endedAt: <timestamp>
        ├── status: 'active' | 'completed'
 
-Lockers (Collection)
+Locker (Collection)
   ├── locker_456 (Document)
        ├── id
        ├── status
