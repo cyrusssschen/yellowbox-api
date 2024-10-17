@@ -27,10 +27,10 @@ export class BookingsController {
 
   @Post('start')
   @UseGuards(FirebaseAuthGuard)
-  @ApiResponse({ status: 401, description: 'UNAUTHORIZED' })
-  @ApiResponse({ status: 400, description: 'BAD_REQUEST' })
-  @ApiResponse({ status: 403, description: 'FORBIDDEN' })
-  @ApiResponse({ status: 201, description: 'LOCKER BOOKED' })
+  @ApiResponse({ status: HttpStatus.UNAUTHORIZED, description: 'UNAUTHORIZED' })
+  @ApiResponse({ status: HttpStatus.BAD_REQUEST, description: 'BAD_REQUEST' })
+  @ApiResponse({ status: HttpStatus.FORBIDDEN, description: 'FORBIDDEN' })
+  @ApiResponse({ status: HttpStatus.CREATED, description: 'LOCKER BOOKED' })
   async startBooking(
     @Body() body: StartBookingRequestDto,
     @Res() res: Response,
@@ -44,12 +44,12 @@ export class BookingsController {
 
   @Put('end')
   @UseGuards(FirebaseAuthGuard)
-  @ApiResponse({ status: 401, description: 'UNAUTHORIZED' })
-  @ApiResponse({ status: 400, description: 'BAD_REQUEST' })
-  @ApiResponse({ status: 403, description: 'FORBIDDEN' })
-  @ApiResponse({ status: 201, description: 'LOCKER ENDED' })
+  @ApiResponse({ status: HttpStatus.UNAUTHORIZED, description: 'UNAUTHORIZED' })
+  @ApiResponse({ status: HttpStatus.BAD_REQUEST, description: 'BAD_REQUEST' })
+  @ApiResponse({ status: HttpStatus.FORBIDDEN, description: 'FORBIDDEN' })
+  @ApiResponse({ status: HttpStatus.OK, description: 'LOCKER ENDED' })
   async endBooking(
-    @Body() request: EndBookingRequestDto,
+    @Body('bookingId') request: EndBookingRequestDto,
     @Res() res: Response,
   ) {
     const { bookingId } = request;

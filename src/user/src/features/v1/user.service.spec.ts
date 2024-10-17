@@ -4,7 +4,7 @@ import { ConflictException, NotFoundException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { FirebaseService } from 'shared/src/firebase';
 import { encryptPassword, isPasswordMatch } from 'shared/src/utils/encryption';
-import ApplicationException from 'shared/src/types/exeptions/application.exception';
+import ApplicationException from 'shared/src/types/exceptions/application.exception';
 
 jest.mock('uuid', () => ({
   v4: jest.fn(() => 'mock-uuid'),

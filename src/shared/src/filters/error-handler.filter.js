@@ -13,7 +13,7 @@ exports.ErrorHandlerFilter = void 0;
 const common_1 = require("@nestjs/common");
 const http_problem_details_1 = require("http-problem-details");
 const joi_1 = require("joi");
-const application_exception_1 = __importDefault(require("../types/exeptions/application.exception"));
+const application_exception_1 = __importDefault(require("../types/exceptions/application.exception"));
 const serialization_1 = require("../utils/serialization");
 let ErrorHandlerFilter = class ErrorHandlerFilter {
     catch(err, host) {

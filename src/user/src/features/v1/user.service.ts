@@ -7,7 +7,7 @@ import { JwtService } from '@nestjs/jwt';
 import { v4 as uuidv4 } from 'uuid';
 import { FirebaseService } from 'shared/src/firebase';
 import { encryptPassword, isPasswordMatch } from 'shared/src/utils/encryption';
-import ApplicationException from 'shared/src/types/exeptions/application.exception';
+import ApplicationException from 'shared/src/types/exceptions/application.exception';
 
 @Injectable()
 export class UserService {
