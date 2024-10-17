@@ -82,11 +82,11 @@ Due to the time limitation, the e2e tests are not implemented
 
 > User service
 
-| Method | URL                 | Description                     |
-| ------ | ------------------- | ------------------------------- |
-| `GET`  | `/v1/user/{userId}` | Create new user info by userID. |
-| `POST` | `/v1/user/create`   | Create new user.                |
-| `POST` | `/v1/user/login`    | Generate user token.            |
+| Method | URL                 | Description              |
+| ------ | ------------------- | ------------------------ |
+| `GET`  | `/v1/user/{userId}` | Get user info by userID. |
+| `POST` | `/v1/user/create`   | Create new user.         |
+| `POST` | `/v1/user/login`    | Generate user token.     |
 
 Each microservice has a `Swagger OpenAPI`. Browse to `http://localhost:<port>/swagger` for the details of each API endpoint.
 
