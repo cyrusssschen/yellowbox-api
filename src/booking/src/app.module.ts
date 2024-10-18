@@ -37,7 +37,6 @@ import configs from 'shared/src/configs';
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(HttpContextMiddleware).forRoutes('*');
-    consumer.apply(HttpLoggerMiddleware).forRoutes('*');
+    consumer.apply(HttpContextMiddleware, HttpLoggerMiddleware).forRoutes('*');
   }
 }
