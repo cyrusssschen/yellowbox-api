@@ -17,7 +17,11 @@ node_modules
 .settings/
 *.sublime-workspace
 
+# Package managements
+/.yarn
+
 # IDE - VSCode
+/.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -40,3 +44,8 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+
+#env files
+.env
+
+
