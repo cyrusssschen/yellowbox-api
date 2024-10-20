@@ -1,8 +1,6 @@
-# yellowbox-api
-
 # Documentation APIs
 
-## API endpoints
+## API Endpoints
 
 > Booking service
 
@@ -64,15 +62,13 @@ The following error codes may be encountered:
 - 409 Conflict: Request could not be processed due to conflict with the current state of the resource.
 - 500 Internal Server Error: An unexpected error occurred on the server.
 
-Each error response includes a JSON object containing a descriptive message.
-
 ### Rate Limiting Information
 
 To ensure fair use of the API and prevent abuse, rate limiting is enforced on certain endpoints. Each user can make a limited number of requests to the API within a specified time window.
 
 When a user exceeds the limit, they will receive a 429 Too Many Requests response. Please implement proper error handling to manage rate limiting responses.
 
-The current implementation is using the `ThrottlerModule` provided in the following link.
+The current implementation is using the `ThrottlerModule` provided by Nest.js:
 https://docs.nestjs.com/security/rate-limiting
 
 ### Versioning Strategy

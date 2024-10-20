@@ -2,29 +2,14 @@
 
 **yellowbox-api is a monorepo built on top of [NestJS](https://nestjs.com/) by using [NX](https://nx.dev/) in [microservices](https://microservices.io/) pattern.**
 
-> # Module Structure
->
-> | Module Name     | Feature            |
-> | --------------- | ------------------ |
-> | Locker Service  | Locker Operations  |
-> | User Service    | User management    |
-> | Booking Service | Booking Operations |
-> | Shared          | Shared Library     |
-
 # Prerequisites
 
 Recommend the following installation:
 
 - Install the latest version of Node/NPM ([NVM recommended](https://github.com/nvm-sh/nvm))
 - Install [YARN](https://classic.yarnpkg.com/lang/en/)
-- Install Prettier formatter and ESLint lint VSCode extensions
 
-```
-code --install-extension esbenp.prettier-vscode
-code --install-extension dbaeumer.vscode-eslint
-```
-
-## Env variable
+## Env Variables
 
 1. Simply copy `.env.example` file located in each folder and rename it as `.env` file.
 2. Grab the appropriate private key and key ID from your firebase admin page and replace it in each `.env` file

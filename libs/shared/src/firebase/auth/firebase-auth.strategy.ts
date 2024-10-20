@@ -20,7 +20,7 @@ export class FirebaseAuthStrategy extends PassportStrategy(Strategy) {
   async validate(req: Request, payload: any) {
     const accessToken = req.headers['authorization'];
     const decodedToken: DecodedIdToken = await auth()
-        // @ts-ignore
+      // @ts-ignore
       .verifyIdToken(accessToken, true)
       .catch((err) => {
         console.error(err);
