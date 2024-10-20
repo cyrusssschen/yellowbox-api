@@ -1,0 +1,26 @@
+{
+  "name": "booking",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/booking/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "booking:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "booking:build:development"
+        },
+        "production": {
+          "buildTarget": "booking:build:production"
+        }
+      }
+    }
+  }
+}

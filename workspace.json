@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "booking": "apps/booking",
+    "locker": "apps/locker",
+    "user": "apps/user"
+  }
+}
