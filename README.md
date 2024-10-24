@@ -20,7 +20,7 @@ build all 3 microservices from root folder using the follow commands
 
 ```bash
 yarn install
-nx run-many -t build
+yarn build:all
 ```
 
 # Run
@@ -28,13 +28,13 @@ nx run-many -t build
 To `run` all 3 microservices, run this nx command in root folder:
 
 ```bash
-nx run-many -t serve
+yarn start:all
 ```
 
 To run the specific service, run this command:
 
 ```bash
-nx serve booking
+yarn start:booking
 ```
 
 # Test
@@ -44,9 +44,17 @@ nx serve booking
 To test all microservices, run this command in root folder:
 
 ```bash
-nx run-many -t test --passWithNoTests
+yarn test:all
 ```
 
 ## E2E Tests
 
-T.B.D
+T.B.D.
+
+# Nx Graph
+
+To show Nx Graph
+
+```bash
+yarn build:graph
+```

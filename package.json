@@ -2,9 +2,18 @@
   "name": "@yellowbox-api/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
   "private": true,
   "workspaces": ["libs/*", "apps/*"],
+  "scripts": {
+    "build:all": "nx run-many -t build",
+    "build:graph": "nx run-many -t=build --graph",
+    "start:all": "nx run-many -t serve",
+    "start:booking": "nx serve booking",
+    "start:locker": "nx serve locker",
+    "start:user": "nx serve user",
+    "test:affected": "nx affected -t test --passWithNoTests",
+    "test:all": "nx run-many -t test -p booking locker user"
+  },
   "dependencies": {
     "@nestjs/axios": "^3.0.3",
     "@nestjs/common": "^10.0.0",

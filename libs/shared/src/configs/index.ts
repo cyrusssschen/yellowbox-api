@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import Joi from 'joi';
 
-// Load the appropriate .env file based on the environment
+// Load the appropriate .env file based on each service
 dotenv.config({
   path: path.join(process.cwd(), process.env.NX_TASK_TARGET_PROJECT!, '.env'),
 });
